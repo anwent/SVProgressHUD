@@ -13,9 +13,7 @@
 #import "SVIndefiniteAnimatedView.h"
 #import "SVProgressAnimatedView.h"
 #import "SVRadialGradientLayer.h"
-#import "SVProgressHUD+DGActivityIndicatorView.h"
 
-#define SVRGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 
 NSString * const SVProgressHUDDidReceiveTouchEventNotification = @"SVProgressHUDDidReceiveTouchEventNotification";
 NSString * const SVProgressHUDDidTouchDownInsideNotification = @"SVProgressHUDDidTouchDownInsideNotification";
@@ -200,13 +198,6 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 }
 
 #pragma mark - Show Methods
-
-+ (void)zhShow {
-    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
-    [SVProgressHUD show];
-    [SVProgressHUD setActivityIndicatorType:14];
-    [SVProgressHUD setActivityIndicatorTintColor:SVRGBA(245, 204, 104, 1)];
-}
 
 + (void)show {
     [self showWithStatus:nil];
